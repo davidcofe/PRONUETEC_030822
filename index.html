@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Nuevas Tecnologias 03082022</title>
+	</head>
+	<body>
+		<!-- COMENTARIOS EN HTML !-->
+		<h1>1. BOTONES CON ACCIONES Y MENSAJES:</h1>
+
+		<button onclick="accion_1()" id="Bt1">Boton 1</button>
+
+		<button onclick="accion_2()" id="Bt2">Boton 2</button>
+
+		<button onclick="accion_3()" id="Bt3">Boton 3</button>
+
+
+		<h1>2. DESPLIEGUE DE DATOS:</h1>
+		Hola, a continuacion solicitaremos algunos datos personales, esperamos nos pueda colaborar con su informacion. ¡Gracias! <br>
+
+		<p>Primer Nombre:<input type="text" name="Recibir texto 1" id="Tx1"> <br> </p>
+		<p>Segundo Nombre:<input type="text" name="Recibir texto 2" id="Tx2"> <br> </p>
+		<p>Primer Apellido:<input type="text" name="Recibir texto 3" id="Tx3"> <br> </p>
+		<p>Segundo Apellido:<input type="text" name="Recibir texto 4" id="Tx4"> <br> </p>
+
+		<button onclick="accion_4()" id="Bt4">Concatenar</button> <br> <br>
+
+		Nombre Completo:&nbsp;<output id="Out1"></output> <!-- &nbsp => NON-BREAKING SPACE !-->
+
+
+		<style type="text/css">
+			/* COMENTARIOS EN CSS */
+			body{
+				background-color: rgba(225, 225, 225, 1.0);
+				/* background-image: url( ) */
+				background-repeat: round;
+				color: rgb(0, 0, 0);
+			}
+			h1{color: rgba(0, 100, 0, 1.0);}
+			#Out1{color: rgba(94, 33, 1, 1.0);}
+		</style>
+
+
+		<script type="text/javascript">
+			// COMENTARIOS EN JAVASCRIPT
+			function accion_1() {
+				alert("Accion del Boton 1 (ALERTA)")
+			}
+			function accion_2() {
+				confirm("Mensaje del Boton 2 (Confirmacion)")
+			}
+			function accion_3() {
+				alert("Accion del Boton 3 (ALERTA)")
+				confirm("Mensaje del Boton 3 (CONFIRMACION)")
+			}
+			function accion_4() {
+				var	nombreCompleto = document.getElementById("Tx1").value+" "+
+									 document.getElementById("Tx2").value+" "+
+									 document.getElementById("Tx3").value+" "+
+									 document.getElementById("Tx4").value
+				alert(nombreCompleto)
+				document.getElementById("Out1").innerHTML = nombreCompleto
+			}
+		</script>
+
+	</body>
+</html>
